@@ -1,0 +1,86 @@
+import { describe, it, expect } from "vitest";
+import { adventureQuestions, learningQuizzes } from "../src/data/questions";
+import {
+  vocabulary,
+  reading,
+  conversation,
+  listening,
+  writing,
+  pictureReading,
+  culture,
+} from "../src/data/content";
+import {
+  validateBank,
+  selectAttempt,
+  selectBossRetry,
+} from "../src/game/engine";
+describe("verified production content", () => {
+  it("validates the real 60 question bank", () => {
+    expect(validateBank(adventureQuestions)).toEqual([]);
+    expect(
+      adventureQuestions.filter((q) => q.sourceType === "textbook"),
+    ).toHaveLength(30);
+    expect(
+      adventureQuestions.filter((q) => q.sourceType === "extension"),
+    ).toHaveLength(30);
+  });
+  it("covers all source material", () => {
+    expect(vocabulary).toHaveLength(19);
+    expect(conversation).toHaveLength(10);
+    expect(listening).toHaveLength(5);
+    expect(writing).toHaveLength(3);
+    expect(pictureReading).toHaveLength(4);
+    expect(reading).toHaveLength(5);
+    expect(reading.map((p) => p.en).join(" ")).toContain("unpredictable path");
+    expect(conversation[9].en).toContain(
+      "eight messengers from the underworld",
+    );
+    for (const name of [
+      "Donggang Burning the King Boat",
+      "Tamsui Chingshui Yan Cultural Festival",
+      "Song Jiang Battle Array",
+      "God General Battle Array",
+      "White Crane Battle Array",
+    ])
+      expect(culture.some((c) => c.en === name)).toBe(true);
+  });
+  it("keeps six 5-question learning quizzes separate", () => {
+    const keys = Object.keys(learningQuizzes);
+    expect(keys).toHaveLength(6);
+    const qs = Object.values(learningQuizzes).flat();
+    expect(qs).toHaveLength(30);
+    expect(new Set(qs.map((q) => q.id)).size).toBe(30);
+    expect(qs.some((q) => adventureQuestions.some((a) => a.id === q.id))).toBe(
+      false,
+    );
+    for (const set of Object.values(learningQuizzes))
+      expect(set).toHaveLength(5);
+  });
+  it("draws balanced attempts with preserved answers", () => {
+    for (let i = 0; i < 100; i++) {
+      const qs = selectAttempt(adventureQuestions);
+      expect(qs).toHaveLength(30);
+      expect(new Set(qs.map((q) => q.id)).size).toBe(30);
+      expect(qs.filter((q) => q.sourceType === "textbook")).toHaveLength(15);
+      expect(
+        qs.every((q) => !q.options || q.options.includes(q.correctAnswer)),
+      ).toBe(true);
+    }
+  });
+  it("includes each source listening script in the adventure bank", () => {
+    for (const script of listening)
+      expect(
+        adventureQuestions.some(
+          (q) => q.audioText === script.en && q.sourceType === "textbook",
+        ),
+      ).toBe(true);
+  });
+});
+
+it("Boss retry changes its set even with a fixed random generator", () => {
+  const previous = selectAttempt(adventureQuestions, () => 0.5).slice(25);
+  const next = selectBossRetry(adventureQuestions, previous, () => 0.5);
+  expect(next).toHaveLength(5);
+  expect(next.some((q) => !previous.some((p) => p.id === q.id))).toBe(true);
+  expect(next.filter((q) => q.sourceType === "textbook")).toHaveLength(2);
+});
