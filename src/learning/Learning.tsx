@@ -25,9 +25,7 @@ export function Learning({ id }: { id: string }) {
   return (
     <section className="learning-module">
       <div className="page-heading">
-        <div className="eyebrow">
-          {m.tag} · SLIDES {m.slides}
-        </div>
+        <div className="eyebrow">{m.tag}</div>
         <h1>{m.title}</h1>
         <p>
           {m.zh} · Study freely. Your practice does not affect adventure scores.
@@ -182,7 +180,7 @@ function Vocabulary() {
               <>
                 <BookOpen size={28} />
                 <strong>{v.word}</strong>
-                <small>{v.pos ?? "詞性未標示於原簡報"}</small>
+                <small>{v.pos ?? "phrase · 詞組"}</small>
                 <em>Click to flip · 點選翻面</em>
               </>
             )}
@@ -215,8 +213,7 @@ function Vocabulary() {
             </button>
           </div>
           <p className="muted-text">
-            第 1 頁共 19 個單字；中文釋義與例句為新增教學輔助。fortune teller
-            在原單字表未標詞性。
+            19 個文化單字，搭配中文釋義與教學例句，選擇卡片開始探索。
           </p>
         </div>
         <div className="spelling-panel">
@@ -363,9 +360,7 @@ function Reading() {
       {reading.map((p, i) => (
         <article className="reading-paragraph" key={i}>
           <div className="paragraph-head">
-            <span>
-              PASSAGE {i + 1} · SLIDE {p.slide}
-            </span>
+            <span>PASSAGE {i + 1} · CULTURE & BELIEFS</span>
             <button className="text-button" onClick={() => a.speak(p.en)}>
               <Volume2 size={15} /> Read paragraph
             </button>
@@ -390,7 +385,7 @@ function Reading() {
           )}
           {i === 3 && (
             <p className="textbook-note">
-              教材說法：本段「世界三大宗教活動」排名尚未獨立查證。第 4 頁英文
+              閱讀提醒：原文中的「世界三大宗教活動」排名尚未獨立查證。英文
               millions 與中文「數以萬計」不一致，網站保留原文，不以人數出題。
             </p>
           )}
@@ -443,7 +438,7 @@ function Conversation() {
             <span className="speaker-avatar">{l.speaker[0]}</span>
             <div>
               <div className="dialogue-name">
-                {l.speaker} <small>SLIDE {l.slide}</small>
+                {l.speaker} <small>LISTEN & SPEAK</small>
                 <button
                   aria-label={`Play ${l.speaker} line ${l.id}`}
                   onClick={() => a.speak(l.en, l.speaker)}
@@ -518,7 +513,7 @@ function Culture() {
                 label={`${c.en} symbolic illustration`}
               />
               <div>
-                <span className="eyebrow">SLIDE {c.slide}</span>
+                <span className="eyebrow">LIVING TRADITIONS</span>
                 <h3>{c.en}</h3>
                 <small>{c.zh}</small>
                 <p>{c.description}</p>
@@ -548,7 +543,7 @@ function PictureMatch() {
     <section className="picture-match">
       <h2>Read the scene.</h2>
       <p className="muted-text">
-        第 15–16 頁原句 × 原創象徵插畫。為每句選擇合適的圖片。
+        閱讀下方句子，從這裡的四張插畫中選擇符合的場景。
       </p>
       <div className="picture-options">
         {choices.map((c, i) => (
@@ -631,12 +626,11 @@ function Writing() {
   return (
     <>
       <p className="muted-text">
-        前三題是第 17
-        頁原題。你可以先寫，再與教材參考答案比較。自由句不以單一字串判定文法正誤。
+        先試著訂正下方句子，再與參考答案比較。自由句不以單一字串判定文法正誤。
       </p>
       {writing.map((w, i) => (
         <article className="writing-card" key={w.original}>
-          <span className="eyebrow">TEXTBOOK EXERCISE {i + 1} · SLIDE 17</span>
+          <span className="eyebrow">SENTENCE CORRECTION {i + 1}</span>
           <h3>{w.original}</h3>
           <label>
             Your correction 你的訂正
@@ -653,12 +647,12 @@ function Writing() {
           </button>
           {shown.includes(i) && (
             <div className="model-answer">
-              <strong>Textbook model:</strong>
+              <strong>Model answer:</strong>
               <p>{w.model}</p>
               <p>{w.hint}</p>
               <p>
                 {normalize(inputs[i] ?? "") === normalize(w.model)
-                  ? "與教材參考答案相符。"
+                  ? "與參考答案相符。"
                   : "你的句子可能有其他合理寫法；請比較資訊與句型，必要時請老師協助。"}
               </p>
             </div>
@@ -686,7 +680,7 @@ function Writing() {
             <ul>
               <li>是否有主詞與動詞？</li>
               <li>是否使用課文相關單字？</li>
-              <li>資訊是否尊重多元信仰、符合教材？</li>
+              <li>資訊是否正確，並尊重多元信仰？</li>
               <li>首字大寫、句末有標點嗎？</li>
             </ul>
             <p>本活動提供自我檢核，不做自動文法評分。</p>

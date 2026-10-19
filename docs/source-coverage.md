@@ -31,3 +31,7 @@ Slide 1 contains neither Chinese meanings nor example sentences. Both are newly 
 - The game route is fictional and labeled as such. The final host, the Lantern Keeper, is a fictional knowledge guardian; no real deity is an evil enemy.
 - Local festival/array names on slides 11–12 are accompanied by concise newly written summaries, not invented original textbook paragraphs.
 - Illustrations and synthesized audio are newly created. Gallery images are symbolic aids, not detailed reconstructions of religious rituals.
+
+## Student-facing context
+
+After classroom feedback, adventure and mini-quiz questions no longer refer students to numbered slides or an unseen presentation. Short adapted notices/itineraries and relevant dialogue are shown directly as reading clues. The full original reading and conversation remain available in the learning area. Source page numbers remain in structured data and this documentation, not in student question labels. Gallery summaries use direct cultural descriptions instead of references to slide captions.

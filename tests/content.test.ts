@@ -84,3 +84,46 @@ it("Boss retry changes its set even with a fixed random generator", () => {
   expect(next.some((q) => !previous.some((p) => p.id === q.id))).toBe(true);
   expect(next.filter((q) => q.sourceType === "textbook")).toHaveLength(2);
 });
+
+it("student questions never require an external slide or presentation", () => {
+  for (const q of [
+    ...adventureQuestions,
+    ...Object.values(learningQuizzes).flat(),
+  ]) {
+    const studentText = [
+      q.questionEnglish,
+      q.questionChinese,
+      q.explanationChinese,
+      ...(q.options ?? []),
+    ].join(" ");
+    expect(studentText, q.id).not.toMatch(
+      /\b(slides?|powerpoint|textbook|pptx)\b|投影片|簡報|第\s*\d+[、\d\s]*頁/i,
+    );
+  }
+});
+it("reading tasks carry their own visible clues", () => {
+  const ids = [
+    "s2-text-1",
+    "s2-text-2",
+    "s2-text-3",
+    "s3-text-1",
+    "s3-text-2",
+    "s3-text-3",
+    "s5-text-1",
+    "s5-text-2",
+    "s6-text-2",
+    "s6-text-4",
+    "s6-ext-1",
+  ];
+  for (const id of ids)
+    expect(
+      adventureQuestions.find((q) => q.id === id)?.referenceText,
+      id,
+    ).toBeTruthy();
+  expect(
+    adventureQuestions.find((q) => q.id === "s6-text-2")!.referenceText,
+  ).toContain("Fifth month");
+  expect(
+    adventureQuestions.find((q) => q.id === "s3-ext-5")!.questionEnglish,
+  ).toContain("festival app");
+});

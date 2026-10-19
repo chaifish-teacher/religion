@@ -9,10 +9,12 @@ The Journey of Faith & Culture — a static, bilingual English learning website 
 - 60-question adventure bank: 10 per stage, five textbook-adapted and five extension questions. Every game draws 30 balanced questions across six sequential stages.
 - Original SVG Taiwanese temple, consistent animated explorer, side-scrolling conceptual map, skippable story/transition animations and reduced-motion support.
 - Three hearts, missed-question correction recovery, first-answer records, unlimited randomized Boss retries, frozen first-attempt scores and reviewable results/badges.
-- Browser TTS with adjustable speed, line/full-dialogue playback, distinct speaker voices when available and transcript fallback. Original Web Audio music/effects with mute and volume controls. Music stops during speech and when the page is hidden.
+- Self-contained quiz prompts and always-visible reading clues: students do not need the presentation. Source slide references are retained as development metadata only.
+- A vermilion, antique-gold and paper-cream visual theme with lantern light, a temple arch frame and seal accents.
+- Browser TTS with adjustable speed, line/full-dialogue playback, distinct speaker voices when available and transcript fallback. Original pentatonic Web Audio ambience with plucked strings, bronze chimes and gentle wood percussion; adventure music adds soft processional drums. Mute, preview and volume controls are included. Music stops during speech and when the page is hidden.
 - No login, database, API key or stored student progress. Refreshing starts a new session. Navigation away from a live adventure asks before discarding the session.
 
-The authoritative 17-slide PPTX supplied by the user has been visually inspected and incorporated. See `docs/source-coverage.md` for fidelity notes and attribution. Source textbook images and the presentation are not bundled. Newly written vocabulary meanings/examples and extension questions are labeled. The unverified worldwide festival ranking is marked as a textbook claim.
+The authoritative 17-slide PPTX supplied by the user has been visually inspected and incorporated. See `docs/source-coverage.md` for fidelity notes and attribution. Source textbook images and the presentation are not bundled. New vocabulary meanings/examples are identified as teaching aids; question origins are tracked in development metadata. The unverified worldwide festival ranking is marked as a textbook claim.
 
 ## Develop
 

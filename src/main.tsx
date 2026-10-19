@@ -31,6 +31,7 @@ import { Learning } from "./learning/Learning";
 import { Adventure } from "./game/Adventure";
 import { AudioProvider, useAudio, SpeechControls } from "./audio/Audio";
 import "./styles.css";
+import "./temple-theme.css";
 const icons: Record<string, typeof BookOpen> = {
   book: BookOpen,
   scroll: ScrollText,
@@ -118,7 +119,7 @@ function App() {
             </span>
             <span>
               mazu<span className="brand-dot">.</span>
-              <small>AN ENGLISH LEARNING ADVENTURE</small>
+              <small>FAITH · CULTURE · DISCOVERY</small>
             </span>
           </button>
           <nav aria-label="Main navigation">
@@ -237,8 +238,8 @@ function App() {
                 ))}
               </div>
               <p className="map-note">
-                60 questions in the bank · 30 per adventure · 15
-                textbook-adapted + 15 extension questions each attempt
+                60 questions in the bank · 30 per adventure · Read, listen, and
+                explore
                 <br />
                 無須完成學習區即可開始；重新整理會清除本次進度，不儲存學生資料。
               </p>
@@ -263,10 +264,10 @@ function App() {
           </span>
         </footer>
         <div className="build-status">
-          <ShieldCheck size={13} /> 17 頁教材核對完成 · 19 個單字 · 60
-          題冒險題庫{" "}
+          <ShieldCheck size={13} /> ENGLISH × TAIWAN’S LIVING TRADITIONS · 19
+          個單字 · 60 題文化挑戰{" "}
           <button onClick={() => setModal("source")}>
-            教材與來源 <ArrowUpRight size={12} />
+            About this journey <ArrowUpRight size={12} />
           </button>
         </div>
       </div>
@@ -352,8 +353,7 @@ function App() {
                 <span className="eyebrow">MAKE YOURSELF COMFORTABLE</span>
                 <h2 id="modal-title">Sound & voice</h2>
                 <p>
-                  原創合成背景旋律與音效，無需付費
-                  API。音樂只在互動後播放；語音播放期間背景音樂會靜音。
+                  原創五聲音階音景：撥弦、鐘磬與輕木魚敲擊，冒險時加入輕鼓點。音樂只在互動後播放，語音播放時會靜音；並非真實宗教儀式錄音。
                 </p>
                 <button
                   className="mute-toggle"
@@ -363,6 +363,17 @@ function App() {
                   {audio.muted ? <VolumeX /> : <Volume2 />} Master sound{" "}
                   <strong>{audio.muted ? "Muted 靜音" : "On 開啟"}</strong>
                 </button>
+                <div className="ambience-preview">
+                  <span>
+                    ♫{" "}
+                    {page === "play"
+                      ? "Festival walk · 遶境行旅"
+                      : "Temple courtyard · 廟埕清音"}
+                  </span>
+                  <button className="secondary" onClick={audio.previewMusic}>
+                    Preview ambience 試聽音景
+                  </button>
+                </div>
                 <label className="setting">
                   Music volume 音樂音量{" "}
                   <input
@@ -448,7 +459,7 @@ function App() {
                 <p>
                   教材來源：使用者提供《Unit 05 Religions 宗教.pptx》，17
                   頁；原教材標示 Cosmos © All rights
-                  reserved。本站保留閱讀、對話與練習原文，新增題目、釋義與摘要皆標示為改編或延伸。
+                  reserved。本站保留閱讀、對話與練習原文，來源頁碼保留在開發資料中；作答所需的短文與對話會在題目旁直接呈現。
                 </p>
                 <p>
                   19 個單字、完整閱讀與對話、5 段聽力、4 題圖文配對及 3
@@ -490,11 +501,15 @@ function Home({
           transition={{ duration: 0.5 }}
         >
           <div className="eyebrow">
-            <span /> UNIT 05 · RELIGIONS & CULTURE
+            <span /> FOLLOW THE LANTERNS · EXPLORE TAIWAN
           </div>
           <h1>
-            A little curiosity.
-            <br />A grand <span>adventure.</span>
+            Mazu Adventure
+            <span className="title-seal" aria-hidden="true">
+              平安
+            </span>
+            <br />
+            <span>A journey of discovery.</span>
             <svg viewBox="0 0 300 15" aria-hidden="true">
               <path
                 d="M5 10Q145-4 293 7"
@@ -506,12 +521,12 @@ function Home({
             </svg>
           </h1>
           <p className="hero-description">
-            Follow the lanterns. Discover Taiwan.
+            Through temple gates. Along lantern-lit streets.
             <br />
             Learn English, one adventure at a time.
           </p>
           <p className="chinese-intro">
-            跟著燈籠出發，探索臺灣信仰與文化，
+            走入廟埕、跟隨燈火，探索臺灣信仰與文化，
             <br />
             讓每一次冒險，都成為英語進步的一小步。
           </p>
@@ -548,7 +563,7 @@ function Home({
           transition={{ duration: 0.65 }}
         >
           <div className="art-label">
-            <span className="live-dot" /> YOUR JOURNEY BEGINS HERE
+            <span className="live-dot" /> ENTER THE TEMPLE COURTYARD
           </div>
           <TempleScene />
           <div className="scene-explorer">
@@ -557,7 +572,7 @@ function Home({
           <div className="floating-note">
             <span className="note-icon">✦</span>
             <span>
-              A world of stories awaits.<small>準備好一起探索了嗎？</small>
+              Follow the light. Find a story.<small>準備好一起探索了嗎？</small>
             </span>
           </div>
           <div className="scene-caption">

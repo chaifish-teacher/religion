@@ -1,3 +1,4 @@
+import { beatSeconds, renderAmbienceBeat } from "./soundscape";
 import {
   createContext,
   useContext,
@@ -28,6 +29,7 @@ interface AudioAPI {
   speaking: boolean;
   supported: boolean;
   unlock: () => void;
+  previewMusic: () => void;
   play: (e: Effect) => void;
   speak: (text: string, speaker?: string) => void;
   dialogue: (lines: { en: string; speaker: string }[]) => void;
@@ -45,6 +47,8 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     [theme, setTheme] = useState<"home" | "game">("home");
   const context = useRef<AudioContext | null>(null),
     musicGain = useRef<GainNode | null>(null),
+    masterGain = useRef<GainNode | null>(null),
+    nextBeat = useRef(0),
     step = useRef(0),
     speechActive = useRef(false);
   const supported =
@@ -54,8 +58,13 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     if (!context.current) {
       try {
         context.current = new AudioContext();
+        masterGain.current = context.current.createGain();
+        masterGain.current.gain.value = muted ? 0 : 1;
+        masterGain.current.connect(context.current.destination);
         musicGain.current = context.current.createGain();
-        musicGain.current.connect(context.current.destination);
+        musicGain.current.gain.value =
+          muted || speechActive.current ? 0 : music;
+        musicGain.current.connect(masterGain.current);
       } catch {
         setStatus(
           "Music is unavailable in this browser. 此瀏覽器無法播放音樂。",
@@ -86,27 +95,34 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     o.stop(time + duration + 0.02);
   }
   useEffect(() => {
+    step.current = 0;
+    nextBeat.current = 0;
     const timer = window.setInterval(() => {
       const c = context.current,
         g = musicGain.current;
-      if (!c || !g || muted || document.hidden || speechActive.current) return;
-      g.gain.value = music;
-      const home = [261.63, 329.63, 392, 440, 392, 329.63, 293.66, 329.63];
-      const game = [293.66, 349.23, 440, 523.25, 440, 349.23, 392, 349.23];
-      tone(
-        (theme === "game" ? game : home)[step.current++ % 8],
-        c.currentTime,
-        0.8,
-        g,
-        0.12,
-      );
-    }, 650);
+      if (!c || !g || muted || document.hidden || speechActive.current) {
+        nextBeat.current = 0;
+        return;
+      }
+      if (nextBeat.current < c.currentTime)
+        nextBeat.current = c.currentTime + 0.025;
+      while (nextBeat.current < c.currentTime + 0.12) {
+        renderAmbienceBeat(c, g, theme, step.current++, nextBeat.current);
+        nextBeat.current += beatSeconds(theme);
+      }
+    }, 100);
     return () => clearInterval(timer);
-  }, [muted, music, theme]);
+  }, [muted, theme]);
   useEffect(() => {
     if (musicGain.current)
       musicGain.current.gain.value = muted || speaking ? 0 : music;
+    if (masterGain.current) masterGain.current.gain.value = muted ? 0 : 1;
   }, [muted, music, speaking]);
+  function previewMusic() {
+    unlock();
+    step.current = 0;
+    nextBeat.current = 0;
+  }
   function stop() {
     if (supported) window.speechSynthesis.cancel();
     speechActive.current = false;
@@ -138,7 +154,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     if (!c || muted) return;
     const g = c.createGain();
     g.gain.value = effects;
-    g.connect(c.destination);
+    g.connect(masterGain.current ?? c.destination);
     melodies[e].forEach((f, i) =>
       tone(f, c.currentTime + i * 0.11, 0.3, g, 0.18),
     );
@@ -207,6 +223,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
         speaking,
         supported,
         unlock,
+        previewMusic,
         play,
         speak,
         dialogue,

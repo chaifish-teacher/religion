@@ -26,7 +26,7 @@ const rows: Row[][] = [
       "mercy",
       ["capture", "legend", "deity"],
       1,
-      "mercy 是慈悲；觀音在課文中是 goddess of mercy。",
+      "mercy 是慈悲；觀音在介紹中是 goddess of mercy。",
     ],
     [
       "Which adjective describes many different kinds?",
@@ -93,13 +93,13 @@ const rows: Row[][] = [
       "capture / expel",
       ["mercy / harmony", "legend / deity", "Buddhism / Taoism"],
       1,
-      "capture 與 expel 在單字表中都標示為動詞。",
+      "capture（捕捉）與 expel（驅逐）都表示動作，因此是動詞。",
     ],
   ],
   [
     [
-      "According to the reading quiz, what are Taiwan’s main religions?",
-      "依閱讀測驗，臺灣主要宗教為何？",
+      "Which two major religions are named in the introduction?",
+      "閱讀介紹，找出其中提到的兩大宗教。",
       "Buddhism and Taoism",
       [
         "Confucianism and fortune telling",
@@ -107,51 +107,51 @@ const rows: Row[][] = [
         "Ancestor worship and GPS",
       ],
       6,
-      "第 6 頁答案為 Buddhism and Taoism。",
+      "Buddhism 是佛教，Taoism 是道教；介紹中將兩者列為主要宗教。",
     ],
     [
-      "Who is especially worshipped in fishing villages in the reading?",
-      "依課文，漁村居民主要敬奉誰？",
+      "Who is the sea goddess worshipped in many fishing villages?",
+      "許多漁村居民敬奉的海神是誰？",
       "Mazu",
       ["The land god", "Guan Yu", "Confucius"],
       6,
-      "第 3、6 頁提到媽祖是海神，漁村居民多敬奉祂。",
+      "媽祖是海神，許多漁村居民敬奉祂，祈求海上平安。",
     ],
     [
-      "Why do farmers worship the land god in the reading quiz?",
-      "依課文測驗，農民為何敬奉土地公？",
+      "What do farmers hope for when they worship the land god?",
+      "農民敬奉土地公時，通常祈求什麼？",
       "For a good harvest",
       ["For a fixed route", "For live streaming", "For a sea journey"],
       7,
-      "第 7 頁：土地公了解豐收的重要性。",
+      "農民敬奉土地公，祈求 good harvest，也就是豐收。",
     ],
     [
       "Who is called the goddess of mercy?",
-      "誰在課文中被稱為慈悲之神？",
+      "誰被稱為慈悲之神？",
       "Guanyin",
       ["Mazu", "Guan Yu", "The land god"],
       3,
-      "第 3 頁介紹 Guanyin 為 goddess of mercy。",
+      "Guanyin 是觀音；goddess of mercy 意為慈悲之神。",
     ],
     [
       "Who is described as a famous soldier from China?",
-      "課文中誰被介紹為中國名將？",
+      "哪位神明也以歷史上的名將身分為人所知？",
       "Guan Yu",
       ["Confucius", "The land god", "A fortune teller"],
       3,
-      "第 3 頁介紹 Guan Yu 為名將。",
+      "Guan Yu 是關羽，是廣為人知的歷史名將與民間信仰中的神明。",
     ],
     [
-      "A family wants to honor past generations. Which lesson practice fits?",
-      "一家人想紀念先人，符合哪項課文習俗？",
+      "A family wants to honor past generations. Which practice fits?",
+      "一家人想紀念先人，符合哪項習俗？",
       "Ancestor worship",
       ["GPS tracking", "Lion dancing", "Creative merchandise"],
       8,
-      "祭祖是敬重祖先的習俗；這是依課文延伸的情境。",
+      "祭祖是紀念與敬重祖先的習俗。",
     ],
     [
-      "A visitor asks about folk religion. Which answer fits the reading?",
-      "遊客問起民間宗教，哪個說明符合課文？",
+      "A visitor asks what folk religion is. Which explanation fits?",
+      "遊客問起民間宗教，哪個說明合適？",
       "It combines several beliefs.",
       [
         "It uses only one fixed belief.",
@@ -159,11 +159,11 @@ const rows: Row[][] = [
         "It is only a dance group.",
       ],
       3,
-      "課文說民間宗教綜合多種信仰。",
+      "介紹指出民間宗教綜合多種信仰。",
     ],
     [
-      "Two classmates have different beliefs. What matches Ethan’s view?",
-      "兩位同學信仰不同，何者符合 Ethan 的看法？",
+      "Two classmates have different beliefs. How can they get along?",
+      "兩位同學信仰不同，如何友善相處？",
       "They can live together in harmony.",
       [
         "They cannot be friends.",
@@ -174,12 +174,12 @@ const rows: Row[][] = [
       "Ethan 肯定不同信仰者和諧共處。",
     ],
     [
-      "Before a big decision, which person might someone visit, according to the text?",
-      "根據課文延伸情境，做重大決定前可能拜訪誰？",
+      "Before a big decision, some people seek advice about their future. Who might they visit?",
+      "做重大決定前，有些人會找誰詢問運勢？",
       "A fortune teller",
       ["A GPS designer", "A merchandise seller", "A lion dancer"],
       3,
-      "課文指出有些人在重大決定前找算命師；不代表所有人皆如此。",
+      "有些有些人在重大決定前找算命師；不代表所有人皆如此。",
     ],
     [
       "Arrange: Taiwan’s / folk beliefs / are / diverse.",
@@ -193,36 +193,36 @@ const rows: Row[][] = [
   ],
   [
     [
-      "From which temple does Dajia’s procession set out in the reading?",
-      "依課文，大甲遶境從哪座廟出發？",
+      "Read the pilgrimage plan. Which temple is the starting point?",
+      "閱讀行程卡，找出遶境的出發廟宇。",
       "Zhenlan Temple",
       ["A fishing village school", "A city hall", "A mountain museum"],
       4,
-      "第 4 頁寫隊伍從大甲鎮瀾宮出發。",
+      "行程卡的 Departure 表示出發地，列出的是 Zhenlan Temple（鎮瀾宮）。",
     ],
     [
-      "How long does the Dajia journey last in this textbook?",
-      "依本教材，大甲行程多久？",
+      "Read the pilgrimage plan. How long is the journey?",
+      "閱讀行程卡，這趟旅程有幾天？",
       "Nine days",
       ["Three days", "Five months", "One year"],
       4,
-      "第 4 頁原文為 for nine days；實際年度資訊應另查公告。",
+      "行程卡的 nine days 是九天；實際年度行程應以活動公告為準。",
     ],
     [
-      "Which route is unpredictable in the textbook comparison?",
-      "教材比較中，哪個進香路線不可預測？",
+      "Which pilgrimage is known for a less predictable route?",
+      "哪個進香以較難預測的路線聞名？",
       "Baishatun’s route",
       ["Dajia’s fixed route", "A classroom route", "A train timetable"],
       4,
-      "第 4 頁對比大甲固定路線與白沙屯不可預測的路線。",
+      "指南中，大甲是 planned route；白沙屯以較難預測的路線聞名。",
     ],
     [
-      "Which calendar is used for the festival date in the reading?",
-      "課文以哪種曆法說明節慶日期？",
+      "A festival date is given as the third lunar month. Which calendar is used?",
+      "節慶日期標示為農曆三月，使用哪種曆法？",
       "The lunar calendar",
       ["The solar calendar only", "A school calendar", "A work schedule"],
       4,
-      "第 4 頁以農曆三月描述大甲媽祖遶境。",
+      "lunar calendar 是農曆；solar calendar 是陽曆。",
     ],
     [
       "What helps people follow the journey in real time?",
@@ -230,7 +230,7 @@ const rows: Row[][] = [
       "GPS tracking and live streaming",
       ["Only printed legends", "Only old photographs", "Only fortune telling"],
       5,
-      "第 5 頁提到 GPS、直播與專屬應用程式。",
+      "GPS 能定位隊伍；live streaming 讓人即時觀看活動。",
     ],
     [
       "You want to watch the procession from home. Which tool fits?",
@@ -246,11 +246,11 @@ const rows: Row[][] = [
       "The Mazu economy",
       ["Ancestor worship", "The lunar calendar", "A fixed route"],
       5,
-      "教材將創意周邊商品與媽祖經濟連結。",
+      "創意周邊商品將創意周邊商品與媽祖經濟連結。",
     ],
     [
-      "What is the safest summary of the route comparison?",
-      "如何準確摘要教材的路線比較？",
+      "A traveler compares the two pilgrimage guides. Which summary is accurate?",
+      "旅人比較兩種進香路線，哪個摘要準確？",
       "Dajia is planned; Baishatun is less predictable.",
       [
         "Both always use the same route.",
@@ -258,7 +258,7 @@ const rows: Row[][] = [
         "Neither has a procession.",
       ],
       4,
-      "依教材，大甲固定、白沙屯較不可預測；遊戲地圖非真實路線。",
+      "一般介紹中，大甲固定、白沙屯較不可預測；遊戲地圖非真實路線。",
     ],
     [
       "Type the missing word: People follow the journey in real ___.",
@@ -270,16 +270,16 @@ const rows: Row[][] = [
       "gap",
     ],
     [
-      "How should we report the slide’s “world’s three largest” claim?",
-      "應如何呈現投影片的世界三大活動說法？",
-      "As a textbook statement, not a verified ranking",
+      "A festival app shows a moving dot on a map. What does the dot help you find?",
+      "節慶應用程式的地圖上有移動的圓點，它能幫你找到什麼？",
+      "The procession’s current location",
       [
-        "As a ranking proven by this game",
-        "As a GPS measurement",
-        "As a fact with no source needed",
+        "The price of every festival gift",
+        "The meaning of every legend",
+        "The date of every ancestor’s birthday",
       ],
       5,
-      "此排名未獨立查證，應標示教材說法。",
+      "GPS 地圖上的移動標記顯示隊伍目前的位置：current location。",
     ],
   ],
   [
@@ -289,7 +289,7 @@ const rows: Row[][] = [
       "Traditional folk religion",
       ["The lunar calendar", "Live streaming", "Lion dancing"],
       13,
-      "第 13 頁第一段聽力描述民間宗教的多種信仰。",
+      "音訊提到神、鬼、祖先與命運的多種信仰，描述的是民間宗教。",
       "listening",
       listening[0].en,
     ],
@@ -299,7 +299,7 @@ const rows: Row[][] = [
       "Confucianism",
       ["Fortune telling", "A procession", "A harvest festival"],
       13,
-      "第 13 頁第二段：以孔子教誨為基礎的儒家思想。",
+      "音訊說 based on the teachings of Confucius，指以孔子教誨為基礎的儒家思想。",
       "listening",
       listening[1].en,
     ],
@@ -309,7 +309,7 @@ const rows: Row[][] = [
       "The land god",
       ["Mazu", "Guan Yu", "The city god"],
       13,
-      "第 13 頁第三段以豐收說明土地公。",
+      "音訊中的 farmers 與 good harvest 是辨認土地公的線索。",
       "listening",
       listening[2].en,
     ],
@@ -319,7 +319,7 @@ const rows: Row[][] = [
       "The Eight Infernal Generals",
       ["Fishermen and sailors", "Merchandise sellers", "Fortune tellers"],
       14,
-      "第 14 頁第四段描述八家將驅逐邪靈。",
+      "音訊描述擔任隊伍前導、驅逐邪靈的八家將。",
       "listening",
       listening[3].en,
     ],
@@ -333,7 +333,7 @@ const rows: Row[][] = [
         "Mazu and the land god",
       ],
       14,
-      "第 14 頁第五段的答案為佛教與道教。",
+      "音訊描述臺灣的兩大宗教：Buddhism and Taoism。",
       "listening",
       listening[4].en,
     ],
@@ -343,15 +343,15 @@ const rows: Row[][] = [
       "White Crane Battle Array",
       ["Song Jiang Battle Array", "Dajia Mazu Pilgrimage", "GPS tracking"],
       12,
-      "白鶴陣的名稱及教材圖片都呈現白鶴。",
+      "White Crane 意為白鶴，對應白鶴陣的表演形象。",
     ],
     [
-      "Which pair names two battle array performances on slide 12?",
-      "哪一組是第 12 頁介紹的陣頭？",
+      "Which pair names two traditional battle array performances?",
+      "哪一組都是傳統陣頭表演？",
       "Song Jiang and God General Battle Arrays",
       ["Buddhism and Taoism", "Mazu and Guanyin", "GPS and live streaming"],
       12,
-      "第 12 頁介紹宋江陣、神將陣、白鶴陣。",
+      "Song Jiang、God General 與 White Crane Battle Arrays 分別是宋江陣、神將陣與白鶴陣。",
     ],
     [
       "Listen. Which activity fits this new description?",
@@ -359,13 +359,13 @@ const rows: Row[][] = [
       "A religious parade",
       ["A quiet spelling test", "A GPS tutorial", "A private dinner"],
       15,
-      "這是依第 15 頁改寫的聽力，舞獅、表演隊伍與鞭炮屬遊行景象。",
+      "音訊描述舞獅、表演隊伍與鞭炮，這些是宗教遊行中的景象。",
       "listening",
       "We see dancing lions, performing groups, and firecrackers along the street.",
     ],
     [
-      "Which caption matches a picture of an outdoor lion dance?",
-      "戶外舞獅插畫適合哪個說明？",
+      "Dancers wear lion costumes at a temple celebration. What are they taking part in?",
+      "舞者在廟會穿著獅子裝表演，他們正在參與什麼？",
       "A performance in a religious parade",
       [
         "A person checking a dictionary",
@@ -373,7 +373,7 @@ const rows: Row[][] = [
         "A person watching a stream at home",
       ],
       15,
-      "依第 15 頁圖文配對，舞獅屬宗教遊行表演。",
+      "舞獅是廟會與宗教遊行中常見的表演。",
     ],
     [
       "Arrange: The generals / lead / religious processions.",
@@ -387,48 +387,48 @@ const rows: Row[][] = [
   ],
   [
     [
-      "What does Ethan ask Laura to explain at the start?",
-      "Ethan 一開始請 Laura 介紹什麼？",
+      "Read Ethan’s message. What would he like to learn about?",
+      "閱讀 Ethan 的訊息，他想了解什麼？",
       "The religions in Taiwan",
       ["The price of gifts", "The weather at sea", "The rules of GPS"],
       8,
-      "第 8 頁第一句：Tell me about the religions in Taiwan。",
+      "訊息中的 Tell me about... 是請對方介紹的用法；主題為臺灣的宗教。",
     ],
     [
-      "What does Laura say is also important to Taiwanese people?",
-      "Laura 說臺灣人也重視什麼？",
+      "Read Laura’s reply. Which practice does she say is important?",
+      "閱讀 Laura 的回覆，她說哪項習俗很重要？",
       "Ancestor worship",
       ["Only shopping", "A single app", "A fixed game route"],
       8,
-      "第 8 頁 Laura 提到 Ancestor worship。",
+      "Laura 的回覆提到 Ancestor worship，意思是祭祖。",
     ],
     [
-      "Who is Mazu said to protect in Laura’s explanation?",
-      "Laura 說媽祖是哪些人的守護神？",
+      "Who is Mazu traditionally said to protect at sea?",
+      "傳統信仰中，媽祖守護哪些海上工作的人？",
       "Fishermen and sailors",
       ["Only shop owners", "Only lion dancers", "Only fortune tellers"],
       9,
-      "第 9 頁：the protector of fishermen and sailors。",
+      "fishermen 是漁民，sailors 是船員；介紹中稱媽祖是他們的守護神。",
     ],
     [
-      "Correct the textbook sentence: People pray to Mazu for ___.",
-      "依第 17 頁訂正：人們拜媽祖祈求什麼？",
+      "Complete the sentence: People pray to Mazu for ___.",
+      "完成句子：人們敬奉媽祖，祈求什麼？",
       "good luck and safety",
       ["good harvests and money", "dragons from Heaven", "a new phone"],
       17,
-      "第 17 頁將 good harvests and money 改為 good luck and safety。",
+      "good luck and safety 是好運與平安，是媽祖信仰常見的祈願。",
     ],
     [
-      "Who are the Eight Infernal Generals in Laura’s dialogue?",
-      "依 Laura 的對話，八家將是誰？",
+      "Read the description. Who are the Eight Infernal Generals?",
+      "閱讀介紹，八家將的傳統形象是什麼？",
       "Eight messengers from the underworld",
       ["Eight dragons from Heaven", "Eight sea goddesses", "Eight farmers"],
       10,
-      "第 10 頁原文為 eight messengers from the underworld。",
+      "介紹中的 eight messengers from the underworld 是來自陰間的八位使者。",
     ],
     [
       "Choose a polite reply to “Tell me about the religions in Taiwan.”",
-      "選出適當且符合教材的回應。",
+      "選出切合對方問題的禮貌回應。",
       "Buddhism and Taoism are important here.",
       [
         "I cannot find my shoes.",
@@ -479,8 +479,8 @@ const rows: Row[][] = [
   ],
   [
     [
-      "Which statement best summarizes the reading’s view of Taiwan’s beliefs?",
-      "何者最符合課文對臺灣信仰的描述？",
+      "Which statement best describes the different beliefs in the introduction?",
+      "閱讀介紹，哪個句子最能描述其中的多元信仰？",
       "A mix of religions and folk beliefs is common.",
       [
         "Everyone follows exactly one belief.",
@@ -488,19 +488,19 @@ const rows: Row[][] = [
         "Technology has replaced every tradition.",
       ],
       2,
-      "第 2 頁指出多數臺灣人結合宗教與民間信仰。",
+      "介紹中的 a mix of religions and folk beliefs 是宗教與民間信仰的結合。",
     ],
     [
-      "According to slide 5, which lunar month is Taipei’s city god celebration in?",
-      "依第 5 頁，臺北城隍壽誕在農曆幾月？",
+      "Read the temple notice. In which lunar month is this celebration?",
+      "閱讀廟會告示，這項慶典在農曆幾月？",
       "The fifth month",
       ["The first month", "The seventh month", "The twelfth month"],
       5,
-      "教材介紹為農曆五月；此題僅依教材敘述作答。",
+      "告示中的 fifth month of the lunar calendar 表示農曆五月。",
     ],
     [
-      "Which local festival is named on slide 11 besides the Mazu festival?",
-      "第 11 頁除媽祖節慶外還介紹哪項活動？",
+      "Which festival name describes burning a king boat?",
+      "哪個節慶名稱提到燒王船？",
       "Donggang Burning the King Boat",
       [
         "A mountain skiing festival",
@@ -508,11 +508,11 @@ const rows: Row[][] = [
         "A winter ice race",
       ],
       11,
-      "第 11 頁另有東港燒王船與淡水清水巖文化節。",
+      "Donggang Burning the King Boat 是東港燒王船；burning 是燃燒。",
     ],
     [
-      "Correct the festival date using the textbook writing exercise.",
-      "依教材寫作練習，選出訂正後的時間。",
+      "Read the Mazu festival invitation. When is the event?",
+      "閱讀媽祖節慶邀請卡，找出活動時間。",
       "The third month on the lunar calendar",
       [
         "The seventh month on the solar calendar",
@@ -520,19 +520,19 @@ const rows: Row[][] = [
         "The fifth day of every week",
       ],
       17,
-      "第 17 頁訂正為 third month on the lunar calendar。",
+      "邀請卡中的 third month of the lunar calendar 是農曆三月。",
     ],
     [
       "What can you often see in front of temples on gods’ birthdays?",
-      "依課文，神明壽誕時廟前常有什麼？",
+      "神明壽誕慶典時，廟前常有什麼活動？",
       "Performances that attract people",
       ["Only empty streets", "Only private examinations", "Only GPS shops"],
       5,
-      "第 5 頁提到廟前有表演吸引民眾。",
+      "神明壽誕慶典常有表演吸引人們聚集：performances that attract people。",
     ],
     [
-      "A visitor wants both a planned pilgrimage route and its starting temple. Which pair fits the text?",
-      "遊客想知道固定路線及出發廟宇，哪一組符合課文？",
+      "Read the pilgrimage guide. Which pair matches a planned route and its starting temple?",
+      "閱讀進香指南，哪一組符合固定路線與出發廟宇的介紹？",
       "Dajia — Zhenlan Temple",
       [
         "Baishatun — a fixed Dajia route",
@@ -540,11 +540,11 @@ const rows: Row[][] = [
         "White Crane — a streaming app",
       ],
       4,
-      "教材以大甲固定路線與鎮瀾宮出發作介紹。",
+      "指南以大甲固定路線與鎮瀾宮出發作介紹。",
     ],
     [
-      "Which festival name contains a place and a cultural festival from slide 11?",
-      "哪個名稱是第 11 頁介紹的地方文化節？",
+      "A visitor is going to Tamsui. Which festival name matches that place?",
+      "遊客要到淡水，哪個節慶名稱與這個地方相符？",
       "Tamsui Chingshui Yan Cultural Festival",
       [
         "The English Spelling Festival",
@@ -552,7 +552,7 @@ const rows: Row[][] = [
         "The White Crane GPS Festival",
       ],
       11,
-      "第 11 頁為淡水清水巖文化節；不要混淆節慶與陣頭名稱。",
+      "Tamsui 是淡水；節慶名稱中的地名與遊客目的地相符。",
     ],
     [
       "Arrange: Modern technology / helps people / follow the journey.",
@@ -565,15 +565,15 @@ const rows: Row[][] = [
     ],
     [
       "A student says all Taiwanese must believe the same thing. Which correction fits?",
-      "學生說所有臺灣人都必須有同一信仰，如何依課文訂正？",
-      "The lesson describes diverse beliefs living together.",
+      "學生說所有臺灣人都必須有同一信仰，哪個回應較尊重多元文化？",
+      "People with diverse beliefs can live together.",
       [
-        "The lesson bans all folk beliefs.",
+        "All folk beliefs must be banned.",
         "Only sailors may choose beliefs.",
         "Everyone must use the same app.",
       ],
       2,
-      "教材描述多元信仰；對話也肯定和諧共處。",
+      "這些介紹呈現多元信仰；對話也肯定和諧共處。",
     ],
     [
       "Which title fits a report about creative goods and following a procession online?",
@@ -589,6 +589,54 @@ const rows: Row[][] = [
     ],
   ],
 ];
+// Short on-screen clues are learning adaptations; sourceSlide remains developer metadata.
+const pilgrimagePlan =
+  "DAJIA MAZU PILGRIMAGE\nDeparture: Zhenlan Temple, Dajia\nJourney: nine days\nThis is a learning itinerary, not a live travel announcement.";
+const pilgrimageGuide =
+  "Dajia follows a planned route from Zhenlan Temple. Baishatun, from Miaoli, is known for a less predictable route, traditionally guided by Mazu according to belief.";
+const contextOverrides: Record<string, string> = {
+  "s2-text-1": reading[0].en,
+  "s2-text-2":
+    "People in fishing villages prefer to worship Mazu, the folk goddess of the sea.",
+  "s2-text-3":
+    "Farmers prefer to worship the land god because he understands the importance of a good harvest.",
+  "s3-text-1": pilgrimagePlan,
+  "s3-text-2": pilgrimagePlan,
+  "s3-text-3": pilgrimageGuide,
+  "s3-ext-3": pilgrimageGuide,
+  "s5-text-1": `Ethan: ${conversation[0].en}`,
+  "s5-text-2": `Laura: ${conversation[3].en}`,
+  "s6-text-2":
+    "CITY GOD BIRTHDAY CELEBRATION\nFifth month of the lunar calendar\nEnjoy performances in front of the temple.",
+  "s6-text-4":
+    "MAZU FESTIVAL INVITATION\nJoin us during the third month of the lunar calendar.",
+  "s6-ext-1": pilgrimageGuide,
+  "learn-conversation-1": `Ethan: ${conversation[0].en}`,
+  "learn-conversation-2":
+    "A: It is good to live together in harmony.\nB: No doubt!",
+  "learn-conversation-3": `Ethan: ${conversation[2].en}`,
+};
+function questionContext(id: string, slide: number): string | undefined {
+  if (contextOverrides[id]) return contextOverrides[id];
+  if (slide === 1) return undefined;
+  if (slide === 2) return reading[0].en;
+  if (slide === 3) return reading[1].en;
+  if (slide === 4) return pilgrimageGuide;
+  if (slide === 5)
+    return "Creative merchandise helps the festival economy. GPS tracking, live streaming, and apps help people follow the journey. Gods’ birthday celebrations include performances in front of temples.";
+  if (slide >= 8 && slide <= 10)
+    return conversation
+      .filter((l) => l.slide === slide)
+      .map((l) => `${l.speaker}: ${l.en}`)
+      .join("\n");
+  if (slide === 11)
+    return "Discover local festivals: Donggang Burning the King Boat and Tamsui Chingshui Yan Cultural Festival.";
+  if (slide === 12)
+    return "Traditional performances include Song Jiang Battle Array, God General Battle Array, and White Crane Battle Array.";
+  if (slide === 17)
+    return "People pray to Mazu for good luck and safety. The Eight Infernal Generals are messengers from the underworld. A Mazu festival invitation may give its date using the lunar calendar.";
+  return undefined;
+}
 export const adventureQuestions: Question[] = rows.flatMap((stage, s) =>
   stage.map((r, i) => {
     const [
@@ -620,16 +668,12 @@ export const adventureQuestions: Question[] = rows.flatMap((stage, s) =>
         )
         .map((v) => `${v.word}: ${v.zh}`),
       referenceText:
-        type === "listening"
+        type === "listening" || type === "ordering"
           ? undefined
-          : slide >= 2 && slide <= 5
-            ? reading.find((p) => p.slide === slide)?.en
-            : slide >= 8 && slide <= 10
-              ? conversation
-                  .filter((l) => l.slide === slide)
-                  .map((l) => `${l.speaker}: ${l.en}`)
-                  .join("\n")
-              : undefined,
+          : questionContext(
+              `s${s + 1}-${i < 5 ? "text" : "ext"}-${(i % 5) + 1}`,
+              slide,
+            ),
       ...(audio ? { audioText: audio } : {}),
     } as Question;
   }),
@@ -675,13 +719,13 @@ const miniRows: Row[][] = [
       "mercy",
       ["capture", "parade", "harmony"],
       3,
-      "課文稱觀音為 goddess of mercy。",
+      "傳統信仰稱觀音為 goddess of mercy。",
     ],
   ],
   [
     [
-      "What does “a mix” mean in the reading?",
-      "課文 a mix 表示什麼？",
+      "What does “a mix of beliefs” mean?",
+      "a mix of beliefs 中的 a mix 表示什麼？",
       "A combination",
       ["A fixed road", "A single photograph", "A date"],
       2,
@@ -693,7 +737,7 @@ const miniRows: Row[][] = [
       "Mazu",
       ["Guanyin", "The land god", "Confucius"],
       3,
-      "媽祖在課文中是海神。",
+      "媽祖在介紹中是海神。",
     ],
     [
       "Which pilgrimage starts in Dajia?",
@@ -708,46 +752,46 @@ const miniRows: Row[][] = [
       "大甲媽祖遶境從大甲鎮瀾宮出發。",
     ],
     [
-      "What does GPS help people do in the lesson?",
-      "教材中 GPS 有何用途？",
+      "What can GPS help visitors do during a pilgrimage?",
+      "進香活動中，GPS 可以幫助遊客做什麼？",
       "Track the journey",
       ["Write legends", "Count ancestors", "Grow crops"],
       5,
       "GPS 定位幫助追蹤行程。",
     ],
     [
-      "Are all folk customs the same across Taiwan in the reading?",
-      "依課文，臺灣各地風俗都一樣嗎？",
+      "Customs differ from place to place in Taiwan. Are they all the same?",
+      "臺灣各地有不同風俗，這些風俗都一樣嗎？",
       "No, customs and beliefs differ.",
       [
         "Yes, all are identical.",
-        "The reading mentions no customs.",
+        "Customs exist only in phone apps.",
         "Only apps have customs.",
       ],
       3,
-      "第 3 頁指出各地風俗與信仰不同。",
+      "differ from place to place 表示因地而異，因此不是各地都相同。",
     ],
   ],
   [
     [
-      "Who says “Tell me about the religions in Taiwan”?",
-      "誰說出這句開場白？",
+      "Read the message: “Ethan: Tell me about the religions in Taiwan.” Who is asking?",
+      "閱讀訊息中的署名，是誰在提問？",
       "Ethan",
       ["Laura", "Mazu", "A farmer"],
       8,
       "此句由 Ethan 說。",
     ],
     [
-      "What does “No doubt” express in this dialogue?",
-      "對話中 No doubt 表示什麼？",
+      "A: “It is good to live in harmony.” B: “No doubt!” What does B express?",
+      "讀取題目中的兩句對話，No doubt 表示什麼？",
       "Agreement",
       ["A question about money", "A route change", "A goodbye"],
       8,
       "No doubt 在此表示的確如此、贊同。",
     ],
     [
-      "What does Ethan think about different religions living together?",
-      "Ethan 如何看待不同宗教共處？",
+      "Ethan says, “It is a good thing that people live in harmony.” How does he feel?",
+      "閱讀 Ethan 的話，他對和諧共處的態度是什麼？",
       "It is a good thing.",
       ["It is impossible.", "It is a GPS problem.", "It is a harvest."],
       8,
@@ -792,12 +836,12 @@ const miniRows: Row[][] = [
       "東港燒王船的英文名稱含 King Boat。",
     ],
     [
-      "Where is Chingshui Yan Cultural Festival named in slide 11?",
-      "第 11 頁清水巖文化節的地名是？",
+      "Which place is named in “Tamsui Chingshui Yan Cultural Festival”?",
+      "Tamsui Chingshui Yan Cultural Festival 名稱中的地名是什麼？",
       "Tamsui",
       ["Dajia", "Miaoli", "A fishing boat"],
       11,
-      "教材名稱為 Tamsui Chingshui Yan Cultural Festival。",
+      "名稱為 Tamsui Chingshui Yan Cultural Festival。",
     ],
     [
       "Which deity is connected with a good harvest?",
@@ -805,7 +849,7 @@ const miniRows: Row[][] = [
       "The land god",
       ["Mazu", "Guanyin", "The chief deity only"],
       3,
-      "課文中的農民敬奉土地公。",
+      "介紹中的農民敬奉土地公。",
     ],
     [
       "Which is a performance rather than a religion?",
@@ -831,8 +875,8 @@ const miniRows: Row[][] = [
   ),
   [
     [
-      "Which correction matches “good harvests and money” in sentence 1?",
-      "第 1 題應訂正為哪個片語？",
+      "Complete: People pray to Mazu for ___.",
+      "完成句子：人們敬奉媽祖祈求什麼？",
       "good luck and safety",
       [
         "good luck and money",
@@ -848,15 +892,15 @@ const miniRows: Row[][] = [
       "underworld",
       ["Heaven", "school", "sea"],
       17,
-      "教材訂正為 from the underworld。",
+      "正確片語為 from the underworld。",
     ],
     [
-      "Which calendar replaces “solar calendar” in sentence 3?",
-      "第 3 題 solar calendar 要改成什麼？",
+      "A festival invitation says “third lunar month.” Which calendar does it use?",
+      "活動邀請寫著 third lunar month，使用哪種曆法？",
       "lunar calendar",
       ["work calendar", "school calendar", "festival app"],
       17,
-      "依教材訂正為農曆。",
+      "依正確片語為農曆。",
     ],
     [
       "Arrange: Mazu / protects / fishermen and sailors.",
@@ -904,6 +948,10 @@ export const learningQuizzes: Record<string, Question[]> = Object.fromEntries(
         ...(d.length ? { options: [a, ...d] } : {}),
         explanationChinese: explanation,
         vocabularyNotes: [],
+        referenceText:
+          type === "listening" || type === "ordering"
+            ? undefined
+            : questionContext(`learn-${id}-${i + 1}`, slide),
         audioText: audio,
       } as Question;
     }),

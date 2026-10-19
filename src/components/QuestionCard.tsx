@@ -49,18 +49,15 @@ export function QuestionCard({
         <span>
           {q.type.toUpperCase()} · {q.difficulty}
         </span>
-        <span>
-          Slide {q.sourceSlide} ·{" "}
-          {q.sourceType === "textbook"
-            ? "Textbook adapted 教材改編"
-            : "Extension 延伸練習"}
-        </span>
+        <span>Discover · Think · Answer</span>
       </div>
       <h2>{q.questionEnglish}</h2>
       {showTranslation && <p className="question-zh">{q.questionChinese}</p>}
       {q.referenceText && (
-        <details className="reference">
-          <summary>Read the source passage 查看課文</summary>
+        <section className="reference" aria-label="Reading clue">
+          <h3>
+            Reading clue <span>閱讀線索</span>
+          </h3>
           <p>{q.referenceText}</p>
           <button
             onClick={() => a.speak(q.referenceText!)}
@@ -68,7 +65,7 @@ export function QuestionCard({
           >
             <Volume2 size={15} /> Read aloud
           </button>
-        </details>
+        </section>
       )}
       {q.audioText && (
         <div className="listening-box">

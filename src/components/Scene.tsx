@@ -63,16 +63,22 @@ export function TempleScene() {
     >
       <defs>
         <linearGradient id="sky" x2="0" y2="1">
-          <stop stopColor="#dcebe6" />
-          <stop offset="1" stopColor="#f6ecd6" />
+          <stop stopColor="#efd0a3" />
+          <stop offset="1" stopColor="#fff0cb" />
         </linearGradient>
         <linearGradient id="ground" x2="0" y2="1">
-          <stop stopColor="#bdd2ad" />
-          <stop offset="1" stopColor="#e3d5ac" />
+          <stop stopColor="#d3c6a2" />
+          <stop offset="1" stopColor="#ead6a7" />
         </linearGradient>
+        <radialGradient id="lantern-glow">
+          <stop stopColor="#ffd475" stopOpacity=".8" />
+          <stop offset="1" stopColor="#ffd475" stopOpacity="0" />
+        </radialGradient>
       </defs>
       <rect width="820" height="570" rx="30" fill="url(#sky)" />
       <circle cx="638" cy="102" r="49" fill="#f6d78b" />
+      <circle cx="176" cy="180" r="68" fill="url(#lantern-glow)" />
+      <circle cx="659" cy="172" r="68" fill="url(#lantern-glow)" />
       <g className="scene-clouds" fill="#fff" opacity=".65">
         <ellipse cx="177" cy="92" rx="69" ry="13" />
         <ellipse cx="231" cy="85" rx="37" ry="17" />

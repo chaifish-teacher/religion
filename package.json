@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
-    "test": "vitest run tests/engine.test.ts tests/content.test.ts",
+    "test": "vitest run tests/engine.test.ts tests/content.test.ts tests/soundscape.test.ts",
     "test:e2e": "PLAYWRIGHT_BROWSERS_PATH=/workspace/.cache/ms-playwright playwright test",
     "preview": "vite preview --host 0.0.0.0"
   },

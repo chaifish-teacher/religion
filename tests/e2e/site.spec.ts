@@ -490,3 +490,100 @@ test("vocabulary flashcards, spelling, matching and shuffled picture identities"
     (await page.locator(".practice-message").textContent())?.match(/✓ 正確/g),
   ).toHaveLength(4);
 });
+
+test("standalone clues are visible without opening a source or a presentation", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Start Adventure" }).click();
+  await page.getByRole("button", { name: "Begin stage 開始本關" }).click();
+  for (let i = 0; i < 5; i++) {
+    const q = await currentQuestion(page);
+    await answerQuestion(page, q, true);
+    await page
+      .getByRole("button", { name: "Continue 繼續", exact: true })
+      .click();
+  }
+  await expect(
+    page.getByRole("button", { name: "Begin stage 開始本關" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Begin stage 開始本關" }).click();
+  await expect(
+    page.getByRole("region", { name: "Reading clue" }),
+  ).toBeVisible();
+  await expect(page.locator(".reference p")).not.toBeEmpty();
+  await expect(page.locator(".question-card")).not.toContainText(
+    /Slide|Textbook|簡報|投影片|第\s*\d+\s*頁/i,
+  );
+});
+test("temple ambience produces audio and ducks for speech and master mute", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    const w = window as unknown as {
+      __ctx: AudioContext;
+      __gains: GainNode[];
+      __analyser: AnalyserNode;
+    };
+    w.__gains = [];
+    const Native = window.AudioContext;
+    class ObservedContext extends Native {
+      constructor() {
+        super();
+        w.__ctx = this;
+      }
+      createGain() {
+        const g = super.createGain();
+        w.__gains.push(g);
+        return g;
+      }
+    }
+    Object.defineProperty(window, "AudioContext", {
+      value: ObservedContext,
+      configurable: true,
+    });
+    Object.defineProperty(window, "speechSynthesis", {
+      value: { getVoices: () => [], cancel: () => {}, speak: () => {} },
+      configurable: true,
+    });
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Sound settings" }).click();
+  await page.getByRole("button", { name: "Preview ambience 試聽音景" }).click();
+  await page.evaluate(() => {
+    const w = window as unknown as {
+      __ctx: AudioContext;
+      __gains: GainNode[];
+      __analyser: AnalyserNode;
+    };
+    w.__analyser = w.__ctx.createAnalyser();
+    w.__gains[1].connect(w.__analyser);
+  });
+  await page.waitForFunction(() => {
+    const a = (window as unknown as { __analyser: AnalyserNode }).__analyser,
+      b = new Float32Array(a.fftSize);
+    a.getFloatTimeDomainData(b);
+    return b.some((v) => Math.abs(v) > 0.0001);
+  });
+  await page.getByRole("button", { name: "Test English voice" }).click();
+  expect(
+    await page.evaluate(
+      () =>
+        (window as unknown as { __gains: GainNode[] }).__gains[1].gain.value,
+    ),
+  ).toBe(0);
+  await page.getByRole("button", { name: "Stop", exact: true }).click();
+  expect(
+    await page.evaluate(
+      () =>
+        (window as unknown as { __gains: GainNode[] }).__gains[1].gain.value,
+    ),
+  ).toBeGreaterThan(0);
+  await page.getByRole("button", { name: /Master sound/ }).click();
+  expect(
+    await page.evaluate(
+      () =>
+        (window as unknown as { __gains: GainNode[] }).__gains[0].gain.value,
+    ),
+  ).toBe(0);
+});

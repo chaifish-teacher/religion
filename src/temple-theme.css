@@ -1,0 +1,568 @@
+/* A lantern-lit temple palette; generous plain surfaces keep learning readable. */
+:root {
+  --temple-red: #8f352e;
+  --temple-ink: #49352d;
+  --temple-gold: #bc8b42;
+  --paper: #fff9ed;
+  color: var(--temple-ink);
+  background: #fcf6e9;
+}
+body {
+  background-image: radial-gradient(#b18b5520 0.6px, transparent 0.6px);
+  background-size: 7px 7px;
+}
+.site {
+  background: #fffaf1ed;
+  box-shadow: 0 0 80px #8b563608;
+  position: relative;
+  border-top: 5px solid var(--temple-red);
+}
+header {
+  border-bottom: 1px solid #d8bf90;
+  position: relative;
+}
+header:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    #bc8b4250 0 16px,
+    transparent 16px 20px,
+    #bc8b4250 20px 23px,
+    transparent 23px 28px
+  );
+  opacity: 0.75;
+}
+.brand {
+  color: var(--temple-red);
+}
+.brand-mark {
+  background: var(--temple-red);
+  border: 1px solid #ae7945;
+  box-shadow:
+    inset 0 0 0 3px #8f352e,
+    inset 0 0 0 4px #dbb76e;
+  color: #f9df9e;
+  border-radius: 12px 12px 3px 3px;
+}
+.brand small {
+  color: #937349;
+  letter-spacing: 1.8px;
+}
+.brand-dot {
+  color: #c49345;
+}
+nav button {
+  color: #7c6858;
+}
+nav button.active {
+  color: var(--temple-red);
+}
+nav button.active:after {
+  background: var(--temple-red);
+}
+.sound-button {
+  border-color: #d7be8d;
+  color: var(--temple-red);
+  background: #fff9e8;
+}
+.hero {
+  gap: 40px;
+}
+.eyebrow {
+  color: #976a3c;
+}
+.hero h1 {
+  font-size: clamp(39px, 4.1vw, 61px);
+  color: #6d2925;
+  line-height: 1.16;
+  letter-spacing: -2px;
+}
+.hero h1 > span:not(.title-seal) {
+  font-size: 0.77em;
+  color: #a0773c;
+}
+.title-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  writing-mode: vertical-rl;
+  border: 2px solid #b04f3e;
+  border-radius: 4px;
+  font: 15px/1.4 serif !important;
+  color: #b04f3e !important;
+  letter-spacing: 3px;
+  padding: 6px 3px;
+  margin: 0 0 6px 12px;
+  transform: rotate(7deg);
+}
+.hero h1 svg {
+  width: 72%;
+  left: 0;
+  bottom: -13px;
+}
+.hero-description {
+  color: #6e5642;
+  font-size: 17px;
+}
+.chinese-intro {
+  color: #8d735a;
+  font-size: 13px;
+}
+.hero-note {
+  color: #8b795d;
+}
+.hero-note > span {
+  color: #887453;
+}
+.primary {
+  background: var(--temple-red);
+  color: #fff4d8;
+  box-shadow: 0 4px 0 #6e241718;
+  border: 1px solid #9f4a35;
+}
+.primary:hover {
+  background: #722a25;
+}
+.secondary {
+  background: #fff8e9;
+  border-color: #d5bc88;
+  color: #805c35;
+}
+.secondary:hover {
+  background: #f5e7cc;
+}
+.how-button {
+  color: #88673c;
+}
+.hero-art {
+  padding: 9px 9px 32px;
+  border: 1px solid #c7a664;
+  border-radius: 100px 100px 15px 15px;
+  background: #f0dfb9;
+  box-shadow:
+    inset 0 0 0 4px #fff4d8,
+    0 16px 35px #88613d14;
+}
+.temple-scene {
+  border-radius: 90px 90px 8px 8px;
+}
+.art-label {
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 90%;
+  background: #fff5d8e6;
+  color: #8b552e;
+  border-color: #d4b06d;
+  font-size: 8px;
+}
+.floating-note {
+  border: 1px solid #d6b779;
+  background: #fff8e3;
+  color: #834430;
+}
+.scene-caption {
+  left: 18px;
+  right: 18px;
+  width: auto;
+  color: #8b7042;
+  bottom: 10px;
+  font-size: 7px;
+}
+.scene-explorer {
+  bottom: 10%;
+}
+.facts {
+  border-color: #d9c49c;
+  background: #f7eddb;
+  border-radius: 10px;
+  padding: 24px 12px;
+}
+.facts > div {
+  border-color: #dac69e;
+}
+.facts strong {
+  color: #73483b;
+}
+.facts small {
+  color: #897250;
+}
+.fact-icon {
+  color: #b28846;
+}
+.learning-card {
+  border-color: #e1cdaa;
+  background: #fffaf0;
+}
+.learning-card:hover {
+  border-color: #be9256;
+  box-shadow: 0 7px 24px #9d653018;
+}
+.card-index {
+  color: #e1cda6;
+}
+.card-bottom {
+  border-color: #e9d9b9;
+  color: #9a6540;
+}
+.learning-card h3 {
+  color: #703b31;
+}
+.learning-card p,
+.card-zh {
+  color: #8c785e;
+}
+.card-icon {
+  border-radius: 50% 50% 7px 7px;
+  box-shadow: inset 0 0 0 1px #aa8a4c12;
+}
+.section-heading h2 {
+  color: #744036;
+}
+.section-heading h2 > span {
+  color: #967957;
+}
+.section-aside {
+  color: #927552;
+}
+.journey-banner {
+  background: #8f352e;
+  color: #ffedc5;
+  border: 1px solid #bc8b42;
+  box-shadow:
+    inset 0 0 0 5px #8f352e,
+    inset 0 0 0 6px #c89f5a;
+}
+.journey-banner .eyebrow,
+.journey-banner p {
+  color: #e3c18e;
+}
+.journey-banner button {
+  color: #ffedc5;
+}
+.mini-route > span {
+  background: #fff0cf;
+  border-color: #c3a064;
+  color: #946639;
+}
+.mini-route i {
+  border-color: #d5ad66;
+}
+.mini-route .route-end {
+  background: #d1a55b;
+  color: #652f25;
+  border-color: #e8c782;
+}
+.page-heading h1 {
+  color: #7d352d;
+}
+.page-heading p {
+  color: #8a7358;
+}
+.map-intro,
+.game-world {
+  background: #f4e6cd;
+  border-color: #d6b978;
+}
+.map-intro strong {
+  color: #7d4431;
+}
+.map-intro p {
+  color: #89714d;
+}
+.map-stop.current > .culture-art {
+  border-color: #aa5340;
+}
+.map-stop > span:last-of-type {
+  color: #8b5639;
+}
+.map-footnote {
+  color: #8d724a;
+}
+.adventure-map {
+  background-color: #f4e7d0;
+  background-image: radial-gradient(#a17a3a25 1px, transparent 1px);
+}
+.stage {
+  background: #fff7e7;
+  border-color: #d8bd87;
+  box-shadow: 0 5px 0 #b17d3520;
+}
+.stage-number {
+  color: #b99d72;
+}
+.stage strong {
+  color: #833d30;
+}
+.stage-count,
+.stage small {
+  color: #927045;
+}
+.question-card {
+  background: #fffdf7;
+  border-color: #ddc69b;
+  box-shadow: 0 4px 20px #9c663607;
+}
+.question-card h2 {
+  color: #573b2e;
+  font-size: 28px;
+}
+.question-meta {
+  color: #98683e;
+}
+.question-zh {
+  color: #806a50;
+  font-size: 14px;
+}
+.answer-option {
+  background: #fcf6e9;
+  border-color: #dfcea9;
+  font-size: 16px;
+}
+.answer-option > span {
+  color: #96652f;
+  background: #efdfbe;
+}
+.answer-option:hover:not(:disabled) {
+  background: #f5e7ca;
+  border-color: #c29751;
+}
+.answer-option.correct {
+  background: #eaf0df;
+  border-color: #819760;
+}
+.question-progress {
+  color: #966f41;
+}
+.reference {
+  background: #f5ebd5;
+  border-left: 3px solid #bc8b42;
+  border-radius: 0 9px 9px 0;
+  color: #665039;
+  padding: 20px;
+}
+.reference h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #945a35;
+}
+.reference h3 span {
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 10px;
+}
+.reference p {
+  font-size: 15px;
+  color: #5c4934;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+.reference .text-button {
+  color: #8c5937;
+}
+.listening-box {
+  background: #f4ead6;
+}
+.text-button {
+  color: #906038;
+}
+.speech-controls {
+  border-color: #e2cda7;
+}
+.stage-story,
+.stage-transition {
+  background: #faf0d9;
+  border-color: #dfc58c;
+}
+.stage-story h1,
+.stage-transition h2 {
+  color: #853e2f;
+}
+.boss-story {
+  background: linear-gradient(135deg, #f6e0ae, #f6edda);
+  border-color: #bb8a43;
+}
+.official-progress {
+  color: #966a3e;
+}
+.mode-switch button,
+.reading-paragraph {
+  border-color: #dfcba3;
+}
+.reading-paragraph {
+  background: #fffdf6;
+}
+.paragraph-head {
+  color: #986e44;
+}
+.vocab-inline {
+  color: #964a31;
+  border-color: #cfa24e;
+}
+.flashcard {
+  background: #f4e8c9;
+  border-color: #d6b77d;
+  color: #834b2e;
+}
+.flashcard.flipped {
+  background: #f7e5d1;
+}
+.mini-quiz {
+  background: #f5e8ce;
+  border-color: #d9b97e;
+}
+.culture-card {
+  border-color: #dfcba5;
+  background: #fffaf0;
+}
+.culture-card h3 {
+  color: #804735;
+}
+.culture-card .eyebrow {
+  color: #ad7c43;
+}
+.writing-card {
+  border-color: #e1c99b;
+}
+.matching-panel,
+.picture-match {
+  border-color: #dcc292;
+}
+.matching-columns button {
+  background: #faf1dc;
+  border-color: #d8c28f;
+  color: #7b5838;
+}
+.spelling-panel {
+  background: #f6e9d0;
+  border-color: #ddbf84;
+}
+.ambience-preview {
+  background: #f4e6ca;
+  border: 1px solid #dfc390;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+.ambience-preview > span {
+  font-size: 12px;
+  color: #8b5739;
+  line-height: 1.7;
+}
+.ambience-preview button {
+  font-size: 11px;
+  padding: 10px;
+}
+footer {
+  border-color: #dfc9a0;
+  color: #90734e;
+}
+.build-status {
+  color: #997344;
+}
+.modal {
+  background: #fff8e8;
+  border: 1px solid #c9a15b;
+  box-shadow:
+    inset 0 0 0 5px #fff8e8,
+    inset 0 0 0 6px #dfc493,
+    0 20px 80px #28140e44;
+}
+.modal-overlay {
+  background: #3c241bd1;
+}
+.modal h2 {
+  color: #803b30;
+}
+.mute-toggle {
+  background: #f3e3c3;
+}
+.setting input {
+  accent-color: #9a4430;
+}
+.chosen {
+  border-color: #bd8d47 !important;
+  background: #f1ddb4 !important;
+  color: #7d452c !important;
+}
+@media (max-width: 1100px) {
+  .hero {
+    gap: 25px;
+  }
+  .hero h1 {
+    font-size: 45px;
+  }
+  .title-seal {
+    font-size: 12px !important;
+    margin-left: 6px;
+  }
+}
+@media (max-width: 760px) {
+  .hero {
+    gap: 35px;
+  }
+  .hero h1 {
+    font-size: 44px;
+  }
+  .hero-art {
+    border-radius: 75px 75px 14px 14px;
+  }
+  .temple-scene {
+    border-radius: 65px 65px 7px 7px;
+  }
+  .title-seal {
+    font-size: 12px !important;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .facts {
+    padding: 24px 10px;
+  }
+  .facts small {
+    font-size: 9px;
+  }
+  .question-card h2 {
+    font-size: 24px;
+  }
+  .answer-option {
+    font-size: 15px;
+  }
+  .reference {
+    padding: 17px;
+  }
+  .reference p {
+    font-size: 14px;
+  }
+  .ambience-preview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .build-status {
+    font-size: 8px;
+  }
+  .art-label {
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+  .scene-caption {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .hero-note > span {
+    font-size: 9px;
+  }
+}
